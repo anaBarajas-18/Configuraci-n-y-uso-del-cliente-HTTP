@@ -1,0 +1,30 @@
+<div class="contenedor">
+  <h2>Lista de Usuarios</h2>
+
+  @if (cargando()) {
+    <div class="cargando">
+      <p>Cargando usuarios...</p>
+    </div>
+  }
+
+  @if (error()) {
+    <div class="error">
+      <p>{{ error() }}</p>
+      <button (click)="cargarUsuarios()">Reintentar</button>
+    </div>
+  }
+
+  @if (!cargando() && !error()) {
+    <div class="lista-usuarios">
+      @for (usuario of usuarios(); track usuario.id) {
+        <div class="tarjeta-usuario">
+          <h3>ID: {{ usuario.id }} — {{ usuario.name }}</h3>
+          <p><strong>Correo:</strong> {{ usuario.email }}</p>
+          <p><strong>Teléfono:</strong> {{ usuario.phone }}</p>
+        </div>
+      } @empty {
+        <p>No hay usuarios para mostrar.</p>
+      }
+    </div>
+  }
+</div>

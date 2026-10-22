@@ -1,0 +1,68 @@
+.contenedor {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  font-family: system-ui, sans-serif;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+}
+
+.cargando {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+.error {
+  background-color: #ffe0e0;
+  border: 1px solid #cc0000;
+  color: #cc0000;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.error button {
+  margin-top: 0.5rem;
+  padding: 0.4rem 1rem;
+  cursor: pointer;
+  background-color: #cc0000;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+.lista-usuarios {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+}
+
+.tarjeta-usuario {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1.2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s;
+}
+
+.tarjeta-usuario:hover {
+  transform: translateY(-3px);
+}
+
+.tarjeta-usuario h3 {
+  margin-top: 0;
+  font-size: 1.1rem;
+  color: #1a1a1a;
+}
+
+.tarjeta-usuario p {
+  margin: 0.3rem 0;
+  font-size: 0.95rem;
+  color: #444;
+}
